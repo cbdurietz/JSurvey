@@ -1,0 +1,113 @@
+﻿@color1: #F0CF00;
+@color2: #f0f0f0;
+@color3: #ffffff;
+
+@actionprimary: #43882A;
+
+@fonthead: Arial, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@fontbody: @fonthead;
+
+@jslayerwidth: 35em;
+
+#jsurvey {
+    position: absolute;
+    width: @jslayerwidth;
+    margin-left: -@jslayerwidth / 2;
+    top: @jslayerwidth / 3;
+    left: 50%;
+    z-index: 10000;
+    border: .5em solid @color1;
+    border-bottom: .1em solid @color1;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    padding: 0;
+    background-color: darken(@color3, 10);
+    font-family: @fontbody;
+    font-size: 100%;
+    line-height: 1.25;
+    box-shadow: .5em .5em .5em rgba(0,0,0,.6);
+
+
+    h1, h2, h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        margin: 0;
+        /*background-color: red;*/
+        font-size: 1.5em;
+        padding: .729165em 0 0 0;
+    }
+
+    h2 {
+        margin: 0;
+        /*background-color: lime;*/
+        font-size: 1.33333em;
+        padding: .25em 0 .125em 0;
+    }
+
+    h3 {
+        margin: 0;
+        font-family: @fonthead;
+        font-size: 1.16667em;
+        padding: 0 0 .25em 0;
+    }
+
+
+    .formhead {
+        background-color: @color1;
+    }
+
+    .formbody {
+        margin: 0;
+        background-color: darken(@color3, 10);
+        padding: .5em;
+        /*border: 1px solid #00ff00;*/
+        .questiongroup {
+            background-color: darken(@color3, 5);
+
+            .question {
+                margin: .25em 0 .25em 0;
+                padding: .25em;
+                background-color: @color3;
+
+
+                label {
+                    font-weight: normal;
+                    margin: 0 .5em 0 .25em;
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+
+        .formaction {
+            input[type=button] {
+                border: 1px solid darken(@actionprimary, 10);
+                padding: .25em 0 .25em 0;
+                border-radius: .2em;
+                background-color: @actionprimary;
+                color: lighten(@actionprimary, 40);
+                font-weight: bold;
+                width: 100%;
+            }
+
+            input[type=button]:hover {
+                background-color: lighten(@actionprimary, 20);
+                color: darken(@actionprimary, 40);
+            }
+        }
+    }
+
+    .formfoot {
+        background-color: @color1;
+        font-size: .8em;
+        color: darken(@color1, 25);
+        text-align: center;
+    }
+
+    input, textarea {
+        max-width: none;
+    }
+}
