@@ -8,39 +8,106 @@
     @Scripts.Render("~/bundles/modernizr")
 
     <script type="text/javascript">
-        var appInsights=window.appInsights||function(config){
-            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        var appInsights = window.appInsights || function (config) {
+            function s(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u; for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop()); return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) { var s = u && u(config, r, f, e, o); return s !== !0 && t["_" + i](config, r, f, e, o), s }), t
         }({
-            instrumentationKey:"e2977d69-3c60-4687-b948-babd8cfabb9c"
+            instrumentationKey: "e2977d69-3c60-4687-b948-babd8cfabb9c"
         });
-        
-        window.appInsights=appInsights;
+
+        window.appInsights = appInsights;
         appInsights.trackPageView();
     </script>
 </head>
 <body>
-    <link href="~/Content/JStyle.min.css" rel="stylesheet" />
+    <link href="~/Content/JStyle.css" rel="stylesheet" />
     <div id="jsurvey">
         <div class="formhead">Undersökning</div>
         <div class="formbody">
+            <!--
             <p>Hjälp oss att bli bättre genom att svara på ett par enkla frågor.</p>
             <h1>Profil</h1>
             <p>Din profil kommer endast att användas för att spara demografiskt data.</p>
-
+            -->
             <div class="questiongroup">
+                <!--
                 <h2>Frågegrupp A</h2>
                 <div class="question">
-                    <h3>Kön</h3>
-                    <p>Rent fysiskt, alltså...</p>
-                    <label for="gender_1"><input type="radio" name="gender" id="gender_1" value="1" />Man</label>
-                    <label for="gender_2"><input type="radio" name="gender" id="gender_2" value="2" />Kvinna</label>
+                    <h3>Fråga 1 - Besöksroll</h3>
+                    <p>I vilken roll besöker du webbplatsen?</p>
+                    <label for="q123_1"><input type="radio" name="q123" id="q123_1" value="1" />Patient</label>
+                    <label for="q123_2"><input type="radio" name="q123" id="q123_2" value="2" />Närstående</label>
+                    <label for="q123_3"><input type="radio" name="q123" id="q123_3" value="3" />Remittent</label>
+                    <label for="q123_4"><input type="radio" name="q123" id="q123_4" value="4" />Student</label>
+                    <label for="q123_5"><input type="radio" name="q123" id="q123_5" value="5" />Arbetssökande</label>
+                    <label for="q123_6"><input type="radio" name="q123" id="q123_6" value="6" />Anställd inom Norra Stockholms Psykiatri</label>
+                    <label for="q123_7"><input type="radio" name="q123" id="q123_7" value="7" />Annan roll, nämligen</label>
                 </div>
                 <div class="question">
-                    <h3>Ålder</h3>
+                    <h3>Fråga 2 - Besöksanledning</h3>
                     <label for="age_1"><input type="radio" name="age" id="age_1" value="1" />15-25</label>
                     <label for="age_2"><input type="radio" name="age" id="age_2" value="2" />26-40</label>
                     <label for="age_3"><input type="radio" name="age" id="age_3" value="3" />41-55</label>
                     <label for="age_4"><input type="radio" name="age" id="age_4" value="4" />56-</label>
+                </div>
+                -->
+            </div>
+            <div class="questiongroup">
+                <div class="question">
+                    <h3>Fråga 3 - Om webbplatsen</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <td>Stämmer helt<br />5</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>Stämmer inte alls<br />1</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>a. Det är lätt att hitta det man söker på den här webbplatsen.</th>
+                                <td><input type="radio" name="Q3_1" value="5" /></td>
+                                <td><input type="radio" name="Q3_1" value="4" /></td>
+                                <td><input type="radio" name="Q3_1" value="3" /></td>
+                                <td><input type="radio" name="Q3_1" value="2" /></td>
+                                <td><input type="radio" name="Q3_1" value="1" /></td>
+                            </tr>
+                            <tr>
+                                <th>b. Webbplatsen ger mig den information jag vill ha.</th>
+                                <td><input type="radio" name="Q3_2" value="5" /></td>
+                                <td><input type="radio" name="Q3_2" value="4" /></td>
+                                <td><input type="radio" name="Q3_2" value="3" /></td>
+                                <td><input type="radio" name="Q3_2" value="2" /></td>
+                                <td><input type="radio" name="Q3_2" value="1" /></td>
+                            </tr>
+                            <tr>
+                                <th>c. På den här webbplatsen är informationen tydlig och enkel, den är lätt att förstå.</th>
+                                <td><input type="radio" name="Q3_3" value="5" /></td>
+                                <td><input type="radio" name="Q3_3" value="4" /></td>
+                                <td><input type="radio" name="Q3_3" value="3" /></td>
+                                <td><input type="radio" name="Q3_3" value="2" /></td>
+                                <td><input type="radio" name="Q3_3" value="1" /></td>
+                            </tr>
+                            <tr>
+                                <th>d. Webbplatsens design är tilltalande.</th>
+                                <td><input type="radio" name="Q3_4" value="5" /></td>
+                                <td><input type="radio" name="Q3_4" value="4" /></td>
+                                <td><input type="radio" name="Q3_4" value="3" /></td>
+                                <td><input type="radio" name="Q3_4" value="2" /></td>
+                                <td><input type="radio" name="Q3_4" value="1" /></td>
+                            </tr>
+                            <tr>
+                                <th>e. Webbplatsen ger mig de möjligheter som jag vill ha för att komma i kontakt med företaget/organisationen.</th>
+                                <td><input type="radio" name="Q3_5" value="5" /></td>
+                                <td><input type="radio" name="Q3_5" value="4" /></td>
+                                <td><input type="radio" name="Q3_5" value="3" /></td>
+                                <td><input type="radio" name="Q3_5" value="2" /></td>
+                                <td><input type="radio" name="Q3_5" value="1" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="formaction">
